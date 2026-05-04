@@ -68,9 +68,6 @@
 .back-button {
     display: flex;
     justify-content: flex-start;
-    gap: 10px;
-    margin-top: 54px;
-    margin-left: 80px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -79,7 +76,7 @@
 
 .product__breadcrumbs {
 
-    margin-left: 80px;
+  
     margin-top: 34px;
 
 }
@@ -102,7 +99,9 @@
 .row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    margin-top: 54px;
+    padding: 0 80px;
 
 }
 
@@ -110,15 +109,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 54px;
+  
     gap: 24px;
 
 }
 
 .slider {
     display: flex;
-    justify-content: space-between;
-    width: 88px;
+    align-items: flex-end;
+   width: 100%;
+   gap: 11px;
+
 
 
 
@@ -128,8 +129,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 40px;
-    width: 88px;
     gap: 80px;
 }
 
@@ -142,12 +141,13 @@
 
 .product {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    margin: 76px 24px;
+    justify-content: space-between;
+    padding-left: 80px;
     gap: 40px;
 
+}
+.product-left{
+    max-width: 440px;
 }
 
 .product__info h2 {
