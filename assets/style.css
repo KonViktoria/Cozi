@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D1D1D8;
+
+}
+
+.header__logo {
+    padding-left: 40px;
+    padding-top: 24px;
+    padding-bottom: 17px;
+}
+
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    gap: 41px;
+
+}
+
+.header__nav a {
+    text-decoration: none;
+    font-family: Proxima Nova;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #17183B;
+    text-transform: uppercase;
+
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+    gap: 40px;
+}
+
+.header__actions-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: block;
+
+}
+
+.header__actions-divider {
+    width: 1px;
+    height: 80px;
+    background-color: #D1D1D8;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+}
+
+.back-button {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 54px;
+    margin-left: 80px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.product__breadcrumbs {
+
+    margin-left: 80px;
+    margin-top: 34px;
+
+}
+
+.product__breadcrumbs-link {
+    font-family: Proxima Nova;
+    font-weight: 600;
+    font-style: Semibold;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #9a9a9e;
+}
+
+.product__breadcrumbs-current {
+    color: #17183B;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 54px;
+    gap: 24px;
+
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    width: 88px;
+
+
+
+}
+
+.slider__arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+    width: 88px;
+    gap: 80px;
+}
+
+.slider__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: 76px 24px;
+    gap: 40px;
+
+}
+
+.product__info h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Proxima Nova;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 44px;
+    line-height: 56px;
+    letter-spacing: 0%;
+    gap: 24px;
+
+}
+
+.product__meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 156px;
+    font-family: Proxima Nova;
+    font-weight: 600;
+    font-style: Semibold;
+    font-size: 24px;
+
+}
+
+.product__price {
+    justify-content: space-between;
+    font-family: Proxima Nova;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    leading-trim: NONE;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap 12px;
+
+}
+
+.rating__stars {
+    color: #FFC41F;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+
+}
+
+.rating__score {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-size: 16px;
+    color: #17183B;
+}
+
+.rating__reviews {
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    font-size: 16px;
+    color: #A2A3B1;
+}
+
+. .product__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+
+
+}
+
+.product__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: none;
+}
+
+.product__actions-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    width: 160px;
+    height: 52px;
+    border: 1px solid #A2A3B1;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #17183B;
+    cursor: pointer;
+    padding: 0 16px;
+
+}
+
+.product__actions-count-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #17183B;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.product__actions-count-value {
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    font-size: 16px;
+    color: #17183B;
+}
+
+.product__actions-add-to-cart {
+    background-color: #3AA39F;
+    color: white;
+    border-radius: 4px;
+    width: 164px;
+    height: 52px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.product-right__fon-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product-right__fon-img svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+
+}
+
+.product-right__fon-img img {
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+
+}
