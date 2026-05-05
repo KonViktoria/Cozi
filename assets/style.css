@@ -70,7 +70,7 @@
 }
 
 .product__breadcrumbs {
-  margin-top: 34px;
+  gap: 24px;
 }
 
 .product__breadcrumbs-link {
@@ -146,19 +146,29 @@
   width: 100%;
 }
 
-.product__info h2 {
+.product__info {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+.product__info h2 {
   font-family: Proxima Nova;
   font-weight: 700;
   font-style: Bold;
   font-size: 44px;
   line-height: 56px;
   letter-spacing: 0%;
-  gap: 24px;
-  margin-top:;
+  margin-top: 76px;
 }
-
+.product__description {
+  font-family: Proxima Nova;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
 .product__meta {
   display: flex;
   justify-content: space-between;
@@ -212,12 +222,17 @@
   justify-content: flex-start;
   gap: 24px;
 }
+.product__colors {
+  margin-top: 32px;
+}
 
 .product__actions {
   display: flex;
   align-items: center;
   gap: 24px;
   border: none;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .product__actions-count {
@@ -233,6 +248,15 @@
   color: #17183b;
   cursor: pointer;
   padding: 0 16px;
+}
+.product__information-day {
+  font-family: Proxima Nova;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  margin-bottom: 79px;
+  line-height: 24px;
+  letter-spacing: 0px;
 }
 
 .product__actions-count-btn {
@@ -253,7 +277,7 @@
 }
 
 .product__actions-add-to-cart {
-  background-color: #3aa39f;
+  background-color: rgb(136, 112, 112);
   color: white;
   border-radius: 4px;
   width: 164px;
@@ -296,7 +320,47 @@
   gap: 16px;
 }
 .wishlist-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.product__thumbnails {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+}
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 104px;
+  height: 104px;
+  opacity: 1;
+  border-radius: 5px;
+  border: 1px solid #c5c3b9;
+}
+.thumbnail-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 104px;
+  height: 104px;
+  opacity: 1;
+  border-radius: 5px;
+  border: 2px solid #918468;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.thumbnail-active img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
