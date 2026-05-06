@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
       href="
 https://cdn.jsdelivr.net/npm/@dannymichel/proxima-nova@4.5.2/index.min.css
 "
@@ -406,30 +414,55 @@ https://cdn.jsdelivr.net/npm/@dannymichel/proxima-nova@4.5.2/index.min.css
                 </linearGradient>
               </defs>
             </svg>
-            <img src="assets/img/a4ccde541ff64325995e3bd1.jpg" alt="Chair 1" />
+            <div class="product-right__slider">
+              <div class="product-right__slide">
+                <img
+                  src="assets/img/a4ccde541ff64325995e3bd1.webp"
+                  alt="Chair 1"
+                />
+              </div>
+              <div class="product-right__slide">
+                <img
+                  src="assets/img/947f089ab9f6462b96ad2d6a.webp"
+                  alt="Chair 1"
+                />
+              </div>
+              <div class="product-right__slide">
+                <img
+                  src="assets/img/f36733148add41b1b6624c6b.webp"
+                  alt="Chair 1"
+                />
+              </div>
+              <div class="product-right__slide">
+                <img
+                  src="assets/img/1c980586ca1d46428fa1d5c3.webp"
+                  alt="Chair 1"
+                />
+              </div>
+            </div>
           </div>
           <div class="product__thumbnails">
             <div class="thumbnail-active">
               <img
-                src="assets/img/a4ccde541ff64325995e3bd1.jpg"
+                src="assets/img/a4ccde541ff64325995e3bd1.webp"
                 alt="Chair view 1"
               />
             </div>
             <div class="thumbnail">
               <img
-                src="assets/img/947f089ab9f6462b96ad2d6a.jpg"
+                src="assets/img/947f089ab9f6462b96ad2d6a.webp"
                 alt="Chair 2"
               />
             </div>
             <div class="thumbnail">
               <img
-                src="assets/img/f36733148add41b1b6624c6b.jpg"
+                src="assets/img/f36733148add41b1b6624c6b.webp"
                 alt="Chair 3"
               />
             </div>
             <div class="thumbnail">
               <img
-                src="assets/img/1c980586ca1d46428fa1d5c3.jpg"
+                src="assets/img/1c980586ca1d46428fa1d5c3.webp"
                 alt="Chair 4"
               />
             </div>
@@ -438,4 +471,46 @@ https://cdn.jsdelivr.net/npm/@dannymichel/proxima-nova@4.5.2/index.min.css
       </div>
     </main>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+  <script>
+    $(function () {
+      var $main = $(".product-right__slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".product__thumbnails",
+      });
+
+      $(".product__thumbnails").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: ".product-right__slider",
+        arrows: false,
+        focusOnSelect: true,
+      });
+
+      $(".slider__btn-right").on("click", function () {
+        $main.slick("slickPrev");
+      });
+      $(".slider__btn-left").on("click", function () {
+        $main.slick("slickNext");
+      });
+
+      var total = $main.slick("getSlick").slideCount;
+      $(".slider__total").text("/ " + String(total).padStart(2, "0"));
+
+      $main.on("afterChange", function (event, slick, currentSlide) {
+        $(".slider__current").text(String(currentSlide + 1).padStart(2, "0"));
+      });
+    });
+  </script>
 </html>
