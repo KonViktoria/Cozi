@@ -290,22 +290,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.product-right__fon-img svg {
+.product-right__fon-img > svg {
   position: absolute;
   top: 50%;
   right: 0;
   z-index: 1;
   transform: translateY(-50%);
 }
-.product-right__fon-img {
-  width: 100%;
+
+.product-right__slider {
+  position: relative;
+  z-index: 2;
+  width: 400px;
 }
 
-.product-right__fon-img img {
-  position: relative;
-  z-index: 1;
+.product-right__slide img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
 }
 .product__footer {
   display: flex;
@@ -328,41 +333,172 @@
   cursor: pointer;
 }
 .product__thumbnails {
-  display: flex;
-  gap: 24px;
-  justify-content: flex-end;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 24px;
   margin-right: 80px;
 }
+
+.product__thumbnails .slick-track {
+  display: flex !important;
+  gap: 24px;
+  justify-content: flex-end;
+  margin: 0;
+}
+
 .thumbnail {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   padding: 8px;
   width: 104px;
   height: 104px;
-  opacity: 1;
   border-radius: 5px;
   border: 1px solid #c5c3b9;
+  cursor: pointer;
+  box-sizing: border-box;
 }
-.thumbnail-active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  width: 104px;
-  height: 104px;
-  opacity: 1;
-  border-radius: 5px;
+
+.product__thumbnails .slick-current .thumbnail {
   border: 2px solid #918468;
 }
+
 .thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.thumbnail-active img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+
+.slider__current {
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: 24px;
+  color: #17183b;
+  line-height: 1;
 }
-.
+
+.slider__total {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 18px;
+  color: #a2a3b1;
+  line-height: 1;
+}
+.cart__items {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 650px;
+  width: 100%;
+}
+.cart__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+.cart__title h3 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #17183b;
+  margin: 0 15px 15px 0;
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: 24px;
+  color: #17183b;
+}
+.cart__items-count {
+  display: inline-block;
+  font-size: 14px;
+  color: #a0a0a0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cart__image,
+.cart__value {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 0;
+}
+.cart__image > img,
+.cart__value > img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 30px;
+}
+.cart__content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-auto-rows: auto;
+  gap: 8px 15px;
+  align-items: center;
+}
+h4.cart__title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-size: 18px;
+  font-weight: 600;
+  color: #17183b;
+  margin: 0;
+}
+.cart__color-link {
+  font-size: 14px;
+  color: #a0a0a0;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.cart__count-btn {
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  height: 40px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #17183b;
+  padding: 0;
+}
+.cart__count-value {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #17183b;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.cart__remove {
+  font-size: 14px;
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: color 0.2s ease;
+}
+.cart__discount {
+  display: flex;
+  align-items: center;
+  background-color: #f4faf9;
+  border: 1px solid #bfe3e1;
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+
+.cart__discount-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
