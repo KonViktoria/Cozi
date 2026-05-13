@@ -54,14 +54,6 @@
   background-color: #d1d1d8;
 }
 
-.main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  margin: 0 auto;
-}
-
 .back-button {
   display: flex;
   justify-content: flex-start;
@@ -616,4 +608,39 @@ h4.cart__title {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.cart__summary-input input {
+  height: 56px;
+  width: 100%;
+  padding: 0 56px 0 16px;
+  outline: none;
+  font-family: "Proxima Nova";
+}
+
+.cart__summary-input svg {
+  position: absolute;
+  height: 56px;
+  right: 16px;
+  cursor: pointer;
+}
+.cart__main {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 72px 80px;
+}
+.cart__summary-button-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  width: 100%;
+  background-color: #3aa39f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Proxima Nova";
 }
